@@ -25,10 +25,16 @@ fs.mkdirSync(path.join(uploadsDir, 'audio'), { recursive: true });
 fs.mkdirSync(path.join(uploadsDir, 'covers'), { recursive: true });
 
 // Middleware
+
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: [
+    'http://localhost:5173',
+    'https://beatbox-music-app-lemon.vercel.app',
+    'https://beatbox-music-7un2rzit6-rohitborse210-ai.vercel.app'
+  ],
   credentials: true
 }));
+
 app.use(express.json());
 app.use('/uploads', express.static(uploadsDir));
 
