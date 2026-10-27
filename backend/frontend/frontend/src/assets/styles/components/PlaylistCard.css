@@ -1,0 +1,56 @@
+.playlist-card {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-card);
+  transition: var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+}
+
+.playlist-card:hover {
+  transform: scale(1.03);
+  box-shadow: var(--shadow-glow);
+  background-color: var(--bg-card-hover);
+}
+
+.playlist-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.playlist-count {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 4px 12px;
+  border-radius: var(--radius-xl);
+  display: inline-block;
+  width: fit-content;
+}
+
+.playlist-actions {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  opacity: 0;
+  transition: var(--transition-fast);
+}
+
+.playlist-card:hover .playlist-actions {
+  opacity: 1;
+}
+
+.playlist-delete-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.playlist-delete-btn:hover {
+  color: var(--accent-secondary);
+}

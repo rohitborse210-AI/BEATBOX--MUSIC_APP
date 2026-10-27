@@ -1,0 +1,61 @@
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-table-container {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-lg);
+  overflow-x: auto;
+  box-shadow: var(--shadow-card);
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th, .admin-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.admin-table th {
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  background-color: rgba(0,0,0,0.2);
+}
+
+.admin-table tr:hover td {
+  background-color: var(--bg-card-hover);
+}
+
+.admin-action-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  margin-right: 12px;
+  font-size: 1.1rem;
+}
+
+.admin-action-btn.edit:hover { color: #4facfe; }
+.admin-action-btn.delete:hover { color: var(--accent-secondary); }
+
+.admin-form-modal {
+  background-color: var(--bg-card);
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 500px;
+}
